@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5 {
 }
 
 p {
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .layout-container {
@@ -48,6 +48,15 @@ p {
 body {
     font-family: 'Poppins', sans-serif;
     color: #fff;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.text-accent {
+    color: hsl(var(--clr-accent));
 }
 
 /* ------------------- */
@@ -100,7 +109,7 @@ nav .social a i {
     color: hsl(var(--clr-accent));
 }
 
-nav .social a .fa-linkedin {
+nav .social a:nth-child(2)  {
     margin-left: 10px;
 }
 
@@ -161,8 +170,8 @@ nav .social a .fa-linkedin {
 
 @media (min-width: 750px) {
     .nav-container {
-        padding-top: 25px;
-        padding-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 15px;
     }
 
     .nav-container .mobile-bars {
@@ -187,4 +196,69 @@ nav .social a .fa-linkedin {
         font-size: 30px;
     }
 
+}
+
+/* ------------------- */
+/* Hero                */
+/* ------------------- */
+
+.hero {
+    background-color: hsl(var(--clr-primary));
+    padding-top: 30px;
+}
+
+.hero-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero-flex {
+        flex-direction: row;
+    }
+}
+
+.hero .content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero .content p {
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-inline: auto;
+}
+
+@media (min-width: 600px) {
+    .hero .content h1 {
+        text-align: left;
+    }
+
+    .hero .content p {
+        text-align: left;
+        line-height: 1.7;
+    }
+}
+
+.hero .hero-img {
+    transform: scaleX(-1);
+    width: 250px;
+    margin-inline: auto;
+}
+
+@media (min-width: 600px) {
+    .hero .hero-img {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero .hero-img {
+        width: 40%;
+    }
 }
